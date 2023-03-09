@@ -25,15 +25,15 @@ import AuthNavbar from "components/Navbars/AuthNavbar.js";
 import AuthFooter from "components/Footers/AuthFooter.js";
 
 import routes from "routes.js";
-import styles from '../assets/css/mystyle.module.css'; 
+
 const Auth = (props) => {
   const mainContent = React.useRef(null);
   const location = useLocation();
 
   React.useEffect(() => {
-    document.body.classList.add(styles.bigblue);
+    document.body.classList.add("bg-default");
     return () => {
-      document.body.classList.remove(styles.bigblue);
+      document.body.classList.remove("bg-default");
     };
   }, []);
   React.useEffect(() => {
@@ -61,9 +61,20 @@ const Auth = (props) => {
   return (
     <>
       <div className="main-content" ref={mainContent}>
-        {/* <AuthNavbar /> */}
-        <div className="header py-7 py-lg-8" style={{backgroundColor: "#fefbd2"}}>
+        <AuthNavbar />
+        <div className="header bg-gradient-info py-7 py-lg-8">
           <Container>
+            <div className="header-body text-center mb-7">
+              <Row className="justify-content-center">
+                <Col lg="5" md="6">
+                  <h1 className="text-white">Welcome!</h1>
+                  <p className="text-lead text-light">
+                    Use these awesome forms to login or create new account in
+                    your project for free.
+                  </p>
+                </Col>
+              </Row>
+            </div>
           </Container>
           <div className="separator separator-bottom separator-skew zindex-100">
             <svg
@@ -75,7 +86,7 @@ const Auth = (props) => {
               y="0"
             >
               <polygon
-                className={styles.fill_bigblue}
+                className="fill-default"
                 points="2560 0 2560 100 0 100"
               />
             </svg>

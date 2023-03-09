@@ -1,0 +1,9 @@
+.bigblue {
+    background-color: #5b6718 ;
+  }
+  .bigblue2 {
+    background: linear-gradient(87deg, #fefbd2 0, #5b6718 100%) !important;
+  }
+  .fill_bigblue {
+    fill: #5b6718 ;
+  }
